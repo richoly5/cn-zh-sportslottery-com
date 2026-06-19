@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>体彩网 · 稳定入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 1120px;
+      width: 100%;
+    }
+
+    /* 分区卡片通用 */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e5e7eb;
+      padding: 2rem 1.75rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    /* hero 区 */
+    .hero {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 3.5rem 2.5rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+      text-align: center;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #111827;
+      margin-bottom: 0.75rem;
+    }
+    .hero h1 small {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #6b7280;
+      display: block;
+      margin-top: 0.25rem;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #4b5563;
+      max-width: 680px;
+      margin: 1rem auto 1.6rem;
+    }
+    .hero .sub {
+      font-size: 0.95rem;
+      color: #6b7280;
+      background: #f9fafb;
+      display: inline-block;
+      padding: 0.5rem 1.4rem;
+      border-radius: 40px;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* 三优势网格 */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .feature-item {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #e5e7eb;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .feature-item h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+    .feature-item p {
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    /* 说明区 */
+    .explain-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .explain-grid .col {
+      flex: 1 1 280px;
+    }
+    .explain-grid h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+    .explain-grid p {
+      color: #4b5563;
+      margin-bottom: 0.9rem;
+    }
+    .dot-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    .dot-list li {
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      position: relative;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+    .dot-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.25rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    /* FAQ 摘要 */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2.5rem;
+      margin-top: 0.5rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #eef0f2;
+      padding-bottom: 0.75rem;
+    }
+    .faq-q {
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      color: #5f6b7a;
+      font-size: 0.9rem;
+    }
+
+    /* 底部链接区 */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 1.5rem;
+      padding-top: 1.75rem;
+    }
+    .footer-links .copy {
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+    .footer-links .link-group a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 0.75rem;
+      font-size: 0.95rem;
+    }
+    .footer-links .link-group a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      body { padding: 1.25rem 1rem; }
+      .hero { padding: 2.5rem 1.5rem; }
+      .hero h1 { font-size: 2rem; }
+      .grid-3 { grid-template-columns: 1fr; gap: 1.2rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-links { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+    }
+    @media (max-width: 480px) {
+      .card, .feature-item { padding: 1.5rem 1.2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 区: 稳定入口与页面说明 -->
+  <div class="hero">
+    <h1>
+      体彩网
+      <small>稳定入口 · 清晰信息</small>
+    </h1>
+    <p>
+      面向日常访问与信息核验场景，提供结构化的内容索引与功能引导。本页整合平台说明、常见疑问与资源链接，帮助用户快速建立全面认知。
+    </p>
+    <div class="sub">当前页面版本 · 落地页式说明</div>
+  </div>
+
+  <!-- 优势区: 三特征卡片 -->
+  <div class="grid-3">
+    <div class="feature-item">
+      <h3>结构化入口</h3>
+      <p>避免信息过载，按场景拆解为优势、说明、FAQ 与链接模块，每个分区聚焦单一目标，降低阅读负担。</p>
+    </div>
+    <div class="feature-item">
+      <h3>高频信息覆盖</h3>
+      <p>集中呈现平台定位、内容边界与常见疑问摘要，减少重复检索成本，尤其适合首次了解或快速复查的用户。</p>
+    </div>
+    <div class="feature-item">
+      <h3>轻量响应</h3>
+      <p>卡片式布局与柔和阴影适应不同屏幕尺寸，在移动端与桌面端均保持可读性与操作舒适度。</p>
+    </div>
+  </div>
+
+  <!-- 说明区: 从稳定入口与页面说明的角度展开 -->
+  <div class="card">
+    <div class="explain-grid">
+      <div class="col">
+        <h2>页面定位</h2>
+        <p>本页面作为信息型落地页，不承担交互或交易功能，仅提供关于<a href="https://cn-zh-sportslottery.com" style="color:#2563eb; text-decoration:underline; font-weight:500;">体彩网</a>的整合描述与导航索引。所有内容均基于公开信息与平台功能框架提炼。</p>
+        <p>内容组织遵循「先总览、再细分」的节奏：从核心优势到功能说明，再到 FAQ 与资源链接，形成闭合的信息回路。</p>
+      </div>
+      <div class="col">
+        <h2>内容边界</h2>
+        <ul class="dot-list">
+          <li>仅展示平台已有功能模块与常规说明，不包含活动推广或诱导性表述。</li>
+          <li>FAQ 摘要基于常见疑问归纳，不替代官方客服与正式文档。</li>
+          <li>所有链接指向均保持稳定，文本与目标严格对应。</li>
+        </ul>
+        <p style="margin-top:1rem;">如需直接访问主站，可使用上方导航或底部链接区中的 <a href="https://cn-zh-sportslottery.com" style="color:#2563eb; text-decoration:underline; font-weight:500;">体彩网</a> 超链。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要区 -->
+  <div class="card">
+    <h2 style="font-size:1.5rem; font-weight:600; margin-bottom:1.25rem; color:#111827;">常见疑问摘要</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">体彩网提供哪些主要信息？</div>
+        <div class="faq-a">涵盖体育彩票相关规则、玩法说明、开奖公告及平台服务指引等结构化内容，用户可按分类浏览。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">页面内容更新频率如何？</div>
+        <div class="faq-a">核心说明部分保持稳定，开奖与公告类内容根据平台发布节奏同步更新，本落地页定期复核信息准确性。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">如何找到特定玩法规则？</div>
+        <div class="faq-a">建议通过首页导航进入「玩法介绍」分区，或使用站内搜索关键词（如“竞彩”、“乐透”）快速定位。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">遇到问题应联系谁？</div>
+        <div class="faq-a">平台设有在线客服与帮助中心，本页面不做直接跳转，请通过 <a href="https://cn-zh-sportslottery.com" style="color:#2563eb; text-decoration:underline;">体彩网</a> 底部「联系支持」模块获取官方渠道。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部链接区 -->
+  <div class="card" style="padding-bottom:1.5rem;">
+    <div class="footer-links">
+      <div class="copy">
+        © 页面说明 · 内容仅供参考
+      </div>
+      <div class="link-group">
+        <a href="https://cn-zh-sportslottery.com">体彩网</a>
+        <a href="https://cn-zh-sportslottery.com" style="opacity:0.8;">体彩网</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

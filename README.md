@@ -1,2 +1,38 @@
-# cn-zh-sportslottery-com
-体彩网 - https://cn-zh-sportslottery.com
+# 体彩网 - cn-zh-sportslottery.com
+
+## 简介
+
+体彩网（cn-zh-sportslottery.com）是一个专注于体育彩票信息展示与服务的网站平台。该站点以“体彩网”为核心定位，致力于为中国用户提供便捷、清晰的体育彩票相关内容访问入口。
+
+## 网站特点
+
+- **域名直观**：cn-zh-sportslottery.com 直接体现了“中国体育彩票”的主题，便于用户识别和记忆。
+- **内容聚焦**：体彩网围绕体育彩票领域展开，涵盖相关资讯与信息。
+- **访问便捷**：通过浏览器直接访问 cn-zh-sportslottery.com 即可进入体彩网主页。
+
+## 主要功能
+
+体彩网（cn-zh-sportslottery.com）为用户提供以下服务：
+
+- 体育彩票基础信息展示
+- 相关资讯更新
+- 网站导航与入口服务
+
+## 如何访问
+
+您可以直接在浏览器地址栏输入以下网址访问体彩网：
+
+```
+https://cn-zh-sportslottery.com
+```
+
+也可通过搜索引擎搜索“体彩网”找到该站点。
+
+## 注意事项
+
+- 体彩网（cn-zh-sportslottery.com）仅作为信息展示平台，请用户理性对待彩票相关内容。
+- 访问时请确保网络环境安全，并遵守当地法律法规。
+
+---
+
+*本 README 仅用于介绍 cn-zh-sportslottery.com 体彩网的基本情况。*
